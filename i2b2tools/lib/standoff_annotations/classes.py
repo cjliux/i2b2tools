@@ -64,7 +64,7 @@ class Token(object):
         return False
 
 
-class TokenSequence(object):
+class TokenSequence(Iterable):
     """ Encapsulates the functionality of a sequence of tokens.  it is designed
     to parse using the tokenizer() classmethod,  but can use any other
     subclassed method as long as it returns a list of Token() objects.
@@ -144,7 +144,7 @@ class TokenSequence(object):
         return ''.join([t.to_string() for t in tokens])
 
     def __str__(self):
-        return self.tokens_to_string(self.tokens).encode('string_escape')
+        return self.tokens_to_string(self.tokens)
 
     def __repr__(self):
         fstr = u"<{} '{}', s:{}, e:{}>"
