@@ -1,4 +1,5 @@
 * i2b2tools
+for original version of i2b2tools, please refer to: https://github.com/danlamanna/i2b2tools.
 ** Downloading/Installing
 *** Cloning
     Clone the project note the =--recursive= flag will clone the necessary submodules.
