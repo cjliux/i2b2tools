@@ -530,7 +530,7 @@ class Evaluate(object):
         assert len(set([a.sys_id for a in s_sas.values()])) == 1, \
             "More than one annotator ID in this set of Annotations!"
 
-        self.sys_id = s_sas.values()[0].sys_id
+        self.sys_id = iter(s_sas.values()).__next__().sys_id
 
         for doc_id in list(set(s_sas.keys()) & set(g_sas.keys())):
 
