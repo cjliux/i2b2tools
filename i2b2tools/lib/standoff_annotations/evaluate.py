@@ -334,7 +334,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    if args.filter:
+    if hasattr(args, 'filter') and args.filter is not None:
         evaluate(args.from_dirs, args.to_dir,
                  PHITrackEvaluation if args.sp == "phi" else
                  CardiacRiskTrackEvaluation,
